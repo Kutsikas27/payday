@@ -1,0 +1,27 @@
+#output {
+  height: 1.5em; /* Fixed height to prevent layout shift */
+  margin-top: 10px; /* Optional: add some spacing */
+  width: 700px; /* Full width of the container */
+}
+.input-group {
+  width: 700px;
+  margin: auto;
+  width: 50%;
+}
+.form-control {
+  max-width: 70px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+body {
+  text-shadow: 0 0 10px rgba(50, 251, 226, 0.3),
+    0 0 10px rgba(50, 251, 226, 0.3), 0 0 7px rgba(50, 251, 226, 0.2);
+}
